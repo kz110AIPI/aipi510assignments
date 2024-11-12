@@ -27,8 +27,8 @@ This project is a personal website built using Flask to showcase education, work
 ### Installation
 1. Clone the repository:
    
-   git clone Git Repository Link
-   cd your-repo-name
+   git clone [Git Repository Link](https://github.com/kz110AIPI/aipi510assignments.git)
+   cd aipi510assignments
 
 2. Install dependencies:
     pip install -r requirements.txt
