@@ -1,0 +1,22 @@
+runtime: python311  # python311 for using Python 3.11
+
+# Command to start your app
+entrypoint: gunicorn -b :$PORT app:app
+
+# Instance class (optional, choose a size based on your needs)
+instance_class: F2  # F1, F2, F4, etc., for flexible environments
+
+# Automatic scaling (optional)
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 5
+
+# Optional environment variables
+env_variables:
+  FLASK_ENV: "production"
+  SECRET_KEY: "123456"  # Replace with a secure key
+
+handlers:
+  - url: /.*
+    script: auto  # Required for App Engine to route traffic to your app

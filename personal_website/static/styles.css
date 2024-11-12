@@ -1,0 +1,76 @@
+/* Ensures the entire body stretches to fill the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header, nav, main content, and footer styling */
+header {
+    margin: 0;
+    background-color: #004080;/* set bg as blue */
+    color: #fff;
+    padding: 20px;
+}
+
+nav a {
+    margin-top: 10px;
+    color: white; /* set navigation bar as white */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #004080;
+}
+
+main {
+    flex: 1; /* This makes the main content area grow to fill available space */
+    padding: 20px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+.profile-pic {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Circular headshot */
+    object-fit: cover;
+}
+
+/*Modifying Education page*/
+/* Only target elements within the education section */
+.education-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.education-section li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.education-section .school {
+    font-weight: bold;
+}
+
+.education-section .degree {
+    font-weight: normal;
+}
+
+.education-section .date {
+    font-style: italic;
+    margin-left: auto;
+}

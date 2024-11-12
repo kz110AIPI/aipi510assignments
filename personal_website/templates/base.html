@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }} - Kailong Zhang</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Kailong Zhang</h1>
+        
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('education') }}">Education</a>
+            <a href="{{ url_for('experience') }}">Experience</a>
+            <a href="{{ url_for('skills') }}">Skills</a>
+            <a href="{{ url_for('publications') }}">Publications</a>
+        </nav>
+        <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Your Photo" class="profile-pic">
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>Contact: Linkedin: www.linkedin.com/in/kailong-zhang</p>
+    </footer>
+</body>
+</html>
